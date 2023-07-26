@@ -48,8 +48,39 @@ Za parametar $b$:
 
 $$ \frac{d}{db} = -2(y_1 - (a*x+b)) + ... ... $$
 
-Derivacije parametara opisuju koliko se paramatar mora promjeniti kako bi dosegao svoj lokalni minimum.
+Derivacije parametara opisuju koliko se paramatar mora promjeniti kako bi dosegao svoj lokalni minimum počevši od proizvoljne početne vrijednosti. Ova mjera se u strojnom učenju naziva veličina koraka. Kako estimacija veličine koraka nerijetko precijenjuje kada treba izmjeriti idući korak potrebno je koristi još jedna konstantu, learning rate. Learning rate modificira izračunati step_size kako metoda postala osjetljivija.
 
+$$ \text{step size for a} = \frac{d}{da} * \text{learning rate}$$
+$$ \text{step size for b} = \frac{d}{db} * \text{learning rate}$$
+
+Ove funkcije opisuju gradijent promjene parametara.
+
+Recimo da su nam početne vrijednosti parametara $a$ i $b$ 1 i 0:
+
+Iterativno možemo računati ove funkcije i postepeno mijenjati početne vrijednosti na temelju rezultata.
+
+Najjednostavnija implementacija gradijentnog spusta u pythonu za fitanje linearne jednadžbe:
+
+```python
+# x i y su zavisna i nezavisna varijabla podataka
+
+a = 1
+b = 0
+lr = 0.01
+precision = -1e-9
+while True:
+    da = np.sum(-2*x*(y-(a*x+b)))
+    db = np.sum(-2*(y-(a*x+b)))
+
+    step_size_a = da * lr
+    step_size_b = db * lr
+
+    a-= step_size_a
+    b-= step_size_b
+
+    if step_size_b > precision and step_size_a > precision:
+        break 
+```
 
 
 
