@@ -87,4 +87,5 @@ Računanjem ovog algoritma model se postepeno fita na podatke:
 ![fitting.png](fitting.png)
 ![result.png](result.png)
 
-![animation.mp4](animation.mp4)
+https://github.com/domagojhack/gradijentni_spust/assets/2804094/a3087012-217a-4208-8f39-91fc82249819
+
