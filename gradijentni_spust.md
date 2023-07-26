@@ -80,7 +80,15 @@ while True:
 
     if step_size_b > precision and step_size_a > precision:
         break 
+
+print(a,b)
 ```
+
+```
+0.7854448859780112, 0.5077777941471605
+```
+
+Zadani parametri a i b kod generiranja podataka za ovaj primjer su biti $a=0.8$ i $b=0.5$.
 
 Računanjem ovog algoritma model se postepeno fita na podatke:
 
