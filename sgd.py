@@ -49,8 +49,10 @@ while True:
         break
     
 
-# for a, b in parameter_pairs:
-#     plt.plot(x, a*x+b)
+for a, b in parameter_pairs:
+    plt.plot(x, a*x+b)
+
+plt.savefig("fitting.png")
     
 # create a figure with a 2x2 grid of subplots
 fig = plt.figure(figsize=(10, 8))
@@ -98,4 +100,5 @@ def update(i):
 ani = FuncAnimation(fig, update, frames=range(len(parameter_pairs)), init_func=init, blit=True)
 ani.save('animation.mp4', writer='ffmpeg', fps=60)
 
+plt.savefig("result.png")
 plt.show()
