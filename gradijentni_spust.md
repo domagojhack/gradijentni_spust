@@ -6,9 +6,14 @@ Algoritam se temelji na deriviranju izračuna razlike kvadrata u kojoj je ugnje�
 
 Recimo da imamo skup podataka koji linearno koreliraju (primjer linearne regresije):
 
+
 ![data.png](data.png)
 
-Pomoću algoritma gradijentnog spusta moguće je pronaći parametre pravca ($a$ i $b$, nagib i presjek osi $y$) modela.
+
+Pomoću algoritma gradijentnog spusta moguće je pronaći parametre pravca ($a$ i $b$, nagib i presjek osi $y$) ali i mnogih drugih funkcija.
+
+> linearna regresija se obično riješava metodom najmanjih kvadrata
+
 
 (1) Funkcija pravca modela y i x vrijednosti su nam poznate iz seta podataka
 
@@ -76,4 +81,6 @@ while True:
     if step_size_b > precision and step_size_a > precision:
         break 
 ```
+
+
 
