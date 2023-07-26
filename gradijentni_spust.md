@@ -82,5 +82,8 @@ while True:
         break 
 ```
 
+Računanjem ovog algoritma model se postepeno fita na podatke:
 
+![fitting.png](fitting.png)
+![result.png](result.png)
 
